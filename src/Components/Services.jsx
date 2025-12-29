@@ -1,6 +1,6 @@
 import parkIcon from "../assets/park.png";
 import AgriIcon from "../assets/tractor.png";
-import MaintainIcon from "../assets/Maintenance.png";
+import MaintainIcon from "../assets/maintenance.png";
 import welcome1 from "../assets/welcome1.png";
 
 const Services = () => {
