@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import logo from "./../assets/Verdique logo.jpg"
 
 const Navbar = () => {
 
@@ -10,7 +11,7 @@ function handleshow(){
     <div className='fixed top-0 left-0 right-0 z-50'>   
     <div className='flex justify-between items-center bg-white border-b-4 border-b-green-600'>
     <div className='flex'>
-      <img className='w-12 h-12 rounded-full p-2' src="/src/assets/Verdique logo.jpg" alt=""/>
+      <img className='w-12 h-12 rounded-full p-2' src={logo} alt=""/>
       <div>
         <h2 className='font-extrabold text-lg font-edu'>Verdique</h2>
         <p className='text-[12px] text-gray-500'>YOUR DREAM GARDEN BEGINS HERE</p>

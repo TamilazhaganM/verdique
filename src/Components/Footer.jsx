@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from "./../assets/Verdique logo.jpg"
 
 const Footer = () => {
     const date = new Date()
@@ -7,7 +8,7 @@ const Footer = () => {
     <div className='relative top-20'>
         <div className='bg-black text-white'>
               <div className='flex justify-center p-5 items-center'>
-      <img className='w-12 h-12 rounded-full p-2' src="/src/assets/Verdique logo.jpg" alt=""/>
+      <img className='w-12 h-12 rounded-full p-2' src={logo} alt=""/>
       <div>
         <h2 className='font-extrabold text-lg font-edu'>Verdique</h2>
         <p className='text-[12px] text-gray-500'>YOUR DREAM GARDEN BEGINS HERE</p>
