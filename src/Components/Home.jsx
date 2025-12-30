@@ -6,10 +6,10 @@ const Home = () => {
         className="relative bg-cover bg-center h-screen text-white"
         style={{ backgroundImage: `url(${homebg})` }}
       >
-        <div className="absolute inset-2 rounded-sm bg-black/50"></div>
+        <div className="absolute  rounded-sm bg-black/50"></div>
 
         <div className="relative z-10 flex flex-col justify-center items-center w-11/12 mx-auto text-center h-full md:w-3/4">
-          <h3 className="text-5xl md:text-4xl font-extrabold leading-10">
+          <h3 className="text-5xl md:text-4xl font-extrabold leading-15 shadow-2xl ">
             GREEN LIVING{" "}
             <span className="inline-flex overflow-hidden">
               {"STARTS HERE".split("").map((char, index) => (

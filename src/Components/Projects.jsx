@@ -58,7 +58,7 @@ const Projects = () => {
               />
             </div>
 
-            <h2 className="text-xl font-bold text-center mt-3 bg-green-700">
+            <h2 className="text-xl font-bold text-white text-center mt-3 bg-green-700">
               {image.place}
             </h2>
           </div>

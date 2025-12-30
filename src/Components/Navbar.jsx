@@ -40,15 +40,15 @@ const Navbar = () => {
         </ul>
 
         {/* Icons + Hamburger */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4  md:gap-4 w-fit">
           {/* Phone & Email icons always visible */}
-          <i className="border-2 text-2xl rounded-xl fa-solid fa-phone text-green-700"></i>
-          <i className="border-2 text-2xl rounded-xl fa-regular fa-envelope text-green-700"></i>
+          <i className="border-2 text-xl md:text-2xl rounded-xl fa-solid fa-phone text-green-700"></i>
+          <i className="border-2 text-xl md:text-2xl rounded-xl fa-regular fa-envelope text-green-700"></i>
 
           {/* Hamburger only on mobile */}
           <div className="md:hidden">
  <i
-            className="fa-solid fa-bars text-2xl cursor-pointer md:hidden"
+            className="fa-solid fa-bars text-2xl cursor-pointer"
             onClick={handleShow}
             style={{ color: "#4e535a" }}
           ></i>
