@@ -45,7 +45,7 @@ const Projects = () => {
             </div>
 
             {/* ✅ Place text OUTSIDE overlay area */}
-            <h2 className="text-xl font-bold text-center mt-3 bg-green-500">
+            <h2 className="text-xl font-bold text-center mt-3 bg-green-700">
               {image.place}
             </h2>
           </div>

@@ -5,11 +5,11 @@ import OfferImage3 from "../assets/Quality.png";
 import OfferImage4 from "../assets/Transaparent.png";
 
 const Offer = () => {
-  return (
+  return ( 
     <div>
       <div className="md:flex">
         <div>
-          <img className=" border rounded-full" src={OfferImage} alt="People Choosing Us" />
+          <img className=" border rounded-full my-5" src={OfferImage} alt="People Choosing Us" />
         </div>
         <div className="flex flex-col mx-5">
           <h2 className="text-2xl font-semibold text-green-700 my-5">Why People Choose Us</h2>

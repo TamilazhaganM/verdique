@@ -6,3 +6,24 @@ body{
     --font-edu:"Edu SA Hand","sans-serif";
     --background-color-forms:rgb(244, 239, 239);
 }
+@keyframes letterSlide {
+ 0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Custom utility class */
+@layer utilities {
+  .animate-letter {
+    animation: letterSlide 4s steps(1) infinite;
+  }
+}

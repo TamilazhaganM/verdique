@@ -11,10 +11,10 @@ const Services = () => {
   ];
   return (
     <div className="md:relative bottom-30">
-     <div className="md:relative bottom-30 flex flex-col md:flex-row  items-center justify-center gap-5">
+     <div className="md:relative bottom-30 flex flex-col md:flex-row  items-center justify-center gap-1">
       {icons.map((icon,index) => (
-        <div key={index} className=" w-11/12 md:w-1/4  my-10 ">
-          <div className="flex flex-col justify-center items-center rounded-xl h-40 bg-green-400">
+        <div key={index} className=" w-11/12 md:w-1/4  my-5 ">
+          <div className="flex flex-col justify-center items-center rounded-xl h-40 bg-green-600">
             <img className="w-16 h-16" src={icon.icon} alt="" />
             <p >{icon.name}</p>
           </div>
@@ -76,7 +76,7 @@ const Services = () => {
             id=""
             placeholder="Message"
           ></textarea>
-          <button className="group relative flex items-center justify-center bg-green-500 mx-auto text-white w-fit px-6 py-3 rounded-full transition-all duration-300 hover:bg-green-600 overflow-hidden">
+          <button className="group relative flex items-center justify-center bg-green-700 mx-auto text-white w-fit px-6 py-3 rounded-full transition-all duration-300 hover:bg-green-600 overflow-hidden">
             <i className="fa-solid fa-arrow-right absolute left-2 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0"></i>
             <span className="transition-transform duration-300 group-hover:translate-x-2">
               Submit
@@ -84,7 +84,7 @@ const Services = () => {
           </button>
         </div>
       </div>
-      <div className="h-60 bg-green-600 text-white flex flex-col justify-center items-center ">
+      <div className="h-60 bg-green-700 text-white flex flex-col justify-center items-center ">
       <h4 className="text-3xl p-5 font-semibold">Need a Gardener For your Home ? Please Call:1234567890</h4>
       <button className="bg-white font-semibold text-black p-4 rounded-full cursor-pointer ">CONTACT US</button>
       </div>

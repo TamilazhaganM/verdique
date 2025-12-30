@@ -9,7 +9,7 @@ function handleshow(){
 }
   return (
     <div className='fixed top-0 left-0 right-0 z-50'>   
-    <div className='flex justify-between items-center bg-white border-b-4 border-b-green-600'>
+    <div className='flex justify-between items-center bg-white border-b-4 border-b-green-700'>
     <div className='flex'>
       <img className='w-12 h-12 rounded-full p-2' src={logo} alt=""/>
       <div>
@@ -19,8 +19,8 @@ function handleshow(){
     </div>
       
       <div className='flex items-center gap-5 mr-2'>
-        <i className="border-2 text-xl rounded-xl fa-solid fa-phone text-green-500"></i>
-        <i className="border-2 text-xl rounded-xl  fa-regular fa-envelope text-green-500"></i>
+        <i className="border-2 text-xl rounded-xl fa-solid fa-phone text-green-700"></i>
+        <i className="border-2 text-xl rounded-xl  fa-regular fa-envelope text-green-700"></i>
         <i class="fa-solid fa-bars text-xl cursor-pointer" onClick={handleshow} style={{color:" #4e535a"}}></i>
       </div>
     </div>
