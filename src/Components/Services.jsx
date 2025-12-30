@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import parkIcon from "../assets/park.png";
 import AgriIcon from "../assets/tractor.png";
 import MaintainIcon from "../assets/maintenance.png";
@@ -9,11 +12,15 @@ const Services = () => {
     { icon: AgriIcon, name: "Agricultural Services" },
     { icon: MaintainIcon, name: " Garden Maintenance" },
   ];
+  useEffect(()=>{
+    AOS.init({duration:2000,once:true});
+  },[])
   return (
     <div className="md:relative bottom-30">
-     <div className="md:relative bottom-30 flex flex-col md:flex-row  items-center justify-center gap-1">
+     <div className="md:relative bottom-30 flex flex-col md:flex-row  items-center justify-center gap-6">
       {icons.map((icon,index) => (
-        <div key={index} className=" w-11/12 md:w-1/4  my-5 ">
+        <div key={index} className=" w-11/12 md:w-1/4  my-5 "    data-aos="fade-up"
+            data-aos-delay={index * 200}>
           <div className="flex flex-col justify-center items-center rounded-xl h-40 bg-green-600">
             <img className="w-16 h-16" src={icon.icon} alt="" />
             <p >{icon.name}</p>
@@ -23,10 +30,14 @@ const Services = () => {
       ))}
        </div>
       <div className="flex flex-col md:flex-row justify-center items-start mx-4">
-      <div className="md:3/4">
-        <img className="h-[350px]" src={welcome1} alt=""/>
+      <div className="md:3/4"  data-aos="fade-right"       // slides from left → right
+  data-aos-duration="1500"     // animation duration in ms
+  data-aos-delay="200" >
+        <img className="h-[350px] " src={welcome1} alt=""/>
       </div>
-        <div className="md:w-3/4">
+        <div className="md:w-3/4" data-aos="fade-left"       // slides from left → right
+  data-aos-duration="1500"     // animation duration in ms
+  data-aos-delay="200">
           <h1 className="text-2xl font-bold md:text-5xl ">Welcome to Verdique</h1>
           <div className="w-24 h-1  bg-green-500 mt-2"></div>
 
