@@ -1,3 +1,4 @@
+import Contact from "./Components/Contact"
 import Footer from "./Components/Footer"
 import Home from "./Components/Home"
 import Navbar from "./Components/Navbar"
@@ -18,6 +19,7 @@ function App() {
      <Services/>
      <Offer />
      <Projects />
+     <Contact />
      <Footer/>
     </>
   )

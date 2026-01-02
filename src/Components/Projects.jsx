@@ -4,6 +4,7 @@ import f2 from "../assets/f2.jpg";
 import f3 from "../assets/f3.jpg";
 import f4 from "../assets/f4.jpg";
 
+
 const Projects = () => {
   const images = [
     { image: f1, text: "Thoughtfully designed green spaces.", place: "Residence" },
@@ -51,7 +52,7 @@ const Projects = () => {
 
               {/* Image */}
               <img
-                className="w-full h-auto transform origin-left transition-all duration-500 ease-in-out
+                className="w-full  transform origin-left transition-all duration-500 ease-in-out
                   group-hover:scale-90 group-hover:translate-x-[66.666%]"
                 src={image.image}
                 alt=""

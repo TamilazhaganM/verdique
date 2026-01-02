@@ -25,29 +25,29 @@ const Navbar = () => {
 
         {/* Desktop menu */}
         <ul className="hidden md:flex gap-8">
-          <li className="my-3 border-x-2 px-3 py-2 hover:text-green-700 hover:border-3  cursor-pointer">
+          <li className="my-auto border-x-2 px-4 py-2 hover:text-green-700 hover:border-4  cursor-pointer">
             Home
           </li>
-          <li className="my-3 border-x-2 px-3 py-2 hover:text-green-700 hover:border-3 cursor-pointer">
+          <li className="my-auto border-x-2 px-4 py-2 hover:text-green-700 hover:border-4 cursor-pointer">
             About
           </li>
-          <li className="my-3 border-x-2 px-3 py-2 hover:text-green-700 hover:border-3 cursor-pointer">
+          <li className="my-auto border-x-2 px-4 py-2 hover:text-green-700 hover:border-4 cursor-pointer">
             Services
           </li>
-          <li className="my-3 border-x-2 px-3 py-2 hover:text-green-700 hover:border-3 cursor-pointer">
+          <li className="my-auto border-x-2 px-4 py-2 hover:text-green-700 hover:border-4 cursor-pointer">
             Contact
           </li>
         </ul>
 
         {/* Icons + Hamburger */}
-        <div className="flex items-center gap-4  md:gap-4 w-fit">
+        <div className="flex items-center gap-4  md:gap-8 w-fit">
           {/* Phone & Email icons always visible */}
-          <i className="border-2 text-xl md:text-2xl rounded-xl fa-solid fa-phone text-green-700"></i>
-          <i className="border-2 text-xl md:text-2xl rounded-xl fa-regular fa-envelope text-green-700"></i>
+          <a href="#Contact"><i  className="border-2 text-xl  md:text-2xl rounded-xl fa-solid fa-phone text-green-700"></i></a>
+          <a href="#Messages"><i className="border-2 text-xl md:text-2xl rounded-xl fa-regular fa-envelope text-green-700"></i></a>
 
           {/* Hamburger only on mobile */}
           <div className="md:hidden">
- <i
+          <i
             className="fa-solid fa-bars text-2xl cursor-pointer"
             onClick={handleShow}
             style={{ color: "#4e535a" }}

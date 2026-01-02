@@ -1,7 +1,7 @@
 import homebg from "./../assets/home.jpg";
 const Home = () => {
   return (
-    <div>
+    <div id="home">
       <div
         className="relative bg-cover bg-center h-screen text-white"
         style={{ backgroundImage: `url(${homebg})` }}
@@ -30,6 +30,7 @@ const Home = () => {
           </p>
         </div>
       </div>
+      <a href="#home"><button className="fixed bottom-2 right-2 bg-green-500 text-2xl p-3 rounded-4xl z-10000 cursor-pointer"><i className="fa-solid fa-arrow-up"></i></button></a>
     </div>
   );
 };

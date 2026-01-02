@@ -52,7 +52,7 @@ const Services = () => {
             sustainability, and long-term value.
           </h4>
           <br></br>
-          <h4 className="text-gray-500 text-base   tracking-wide ">
+          <h4 id="Messages" className="text-gray-500 text-base   tracking-wide ">
             With a strong eye for detail and a practical approach, Verdique
             delivers landscape solutions that enhance both residential and
             commercial environments. From concept to execution, every project is
@@ -61,7 +61,7 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="text-center md:w-5/12 w-10/12 mx-auto my-10 bg-white rounded-xl">
+      <div  className="text-center md:w-5/12 w-10/12 mx-auto my-10 bg-white rounded-xl">
         <h1 className=" text-3xl font-bold p-8 md:text-4xl md:font-bold">
           Connect With Verdique
         </h1>

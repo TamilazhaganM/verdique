@@ -2,6 +2,10 @@
 body{
     background-color: rgb(244, 239, 239);
 }
+html {
+  scroll-behavior:smooth;
+}
+
 @theme{
     --font-edu:"Edu SA Hand","sans-serif";
     --background-color-forms:rgb(244, 239, 239);

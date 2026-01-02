@@ -15,6 +15,20 @@ const Footer = () => {
       </div>
     </div>
     <p className='p-5 text-xl text-center'>“Creating green spaces that reflect beauty, balance, and sustainable living.”</p>
+    <div id='Contact' className='text-center flex justify-center gap-5'>
+      <i className="fa-solid fa-phone my-auto text-2xl text-green-700"></i> 
+      <div>
+        <p>+91 96555228239</p>
+      <p>Tamilazhagan M</p>
+      </div>
+      <i class="fa-solid fa-phone my-auto text-2xl text-green-700"></i>
+      <div>
+        <p>+91 8682943056</p> 
+      <p>Venkatesh  P</p>
+    </div>
+      </div>
+      
+      
   <div className="my-8 border-t border-white/40">
         <p className="py-4  text-center text-sm">
           ©Copyright {year} Verdique. Designed and Developed by Tamilazhagan M
