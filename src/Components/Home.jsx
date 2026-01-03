@@ -3,9 +3,11 @@ import homebg from "./../assets/home.jpg";
 import Offer from "./Offer";
 import Projects from "./Projects";
 import Services from "./Services";
+import Welcomebar from "./Welcomebar";
 const Home = () => {
   return (
     <div id="home">
+    <Welcomebar/>
       <div
         className="relative bg-cover bg-center h-screen text-white"
         style={{ backgroundImage: `url(${homebg})` }}
