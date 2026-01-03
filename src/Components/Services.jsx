@@ -5,40 +5,68 @@ import parkIcon from "../assets/park.png";
 import AgriIcon from "../assets/tractor.png";
 import MaintainIcon from "../assets/maintenance.png";
 import welcome1 from "../assets/welcome1.png";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const icons = [
-    { icon: parkIcon, name: "LandScape" },
-    { icon: AgriIcon, name: "Agricultural Services" },
-    { icon: MaintainIcon, name: " Garden Maintenance" },
+    { icon: parkIcon, name: "LandScape", path: "/landscape" },
+      {
+      icon: MaintainIcon,
+      name: " Garden Maintenance",
+      path: "/garden-maintenance",
+    },
+    {
+      icon: AgriIcon,
+      name: "Agricultural Services",
+      path: "/agricultural-services",
+    },
+  
   ];
-  useEffect(()=>{
-    AOS.init({duration:2000,once:true});
-  },[])
+useEffect(() => {
+  AOS.init({
+    duration: 1500,
+    once: true,
+    offset: 200,
+    easing: "ease-out-cubic",
+  })
+}, []);
+
   return (
-    <div className="md:relative bottom-30">
-     <div className="md:relative bottom-30 flex flex-col md:flex-row  items-center justify-center gap-6">
-      {icons.map((icon,index) => (
-        <div key={index} className=" w-11/12 md:w-1/4  my-5 "    data-aos="fade-up"
-            data-aos-delay={index * 200}>
-          <div className="flex flex-col justify-center items-center rounded-xl h-40 bg-green-600">
-            <img className="w-16 h-16" src={icon.icon} alt="" />
-            <p >{icon.name}</p>
-          </div>
-        </div>
-       
-      ))}
-       </div>
-      <div className="flex flex-col md:flex-row justify-center items-start mx-4">
-      <div className="md:3/4"  data-aos="fade-right"       // slides from left → right
-  data-aos-duration="1500"     // animation duration in ms
-  data-aos-delay="200" >
-        <img className="h-[350px] " src={welcome1} alt=""/>
+    <div id="about" className="md:relative mt-24 md:mt-32">
+      <div className="md:relative bottom-30 flex flex-col md:flex-row  items-center justify-center gap-6 ">
+        {icons.map((icon, index) => (
+          <Link
+            to={icon.path}
+            key={index}
+            className=" w-11/12 md:w-1/4  my-5 cursor-pointer "
+            data-aos="fade-up"
+            data-aos-delay={index * 200}
+          >
+            <div className="flex flex-col justify-center items-center rounded-xl h-40 bg-green-600 ">
+              <img className="w-16 h-16" src={icon.icon} alt="" />
+              <p>{icon.name}</p>
+            </div>
+          </Link>
+        ))}
       </div>
-        <div className="md:w-3/4" data-aos="fade-left"       // slides from left → right
-  data-aos-duration="1500"     // animation duration in ms
-  data-aos-delay="200">
-          <h1 className="text-2xl font-bold md:text-5xl ">Welcome to Verdique</h1>
+      <div className="flex flex-col md:flex-row justify-center items-start mx-4">
+        <div
+          className="md:w-3/4"
+          data-aos="fade-right" // slides from left → right
+          data-aos-duration="1500" // animation duration in ms
+          data-aos-delay="200"
+        >
+          <img className="h-[350px] " src={welcome1} alt="" />
+        </div>
+        <div
+          className="md:w-3/4"
+          data-aos="fade-left" // slides from left → right
+          data-aos-duration="1500" // animation duration in ms
+          data-aos-delay="200"
+        >
+          <h1 className="text-2xl font-bold md:text-5xl ">
+            Welcome to Verdique
+          </h1>
           <div className="w-24 h-1  bg-green-500 mt-2"></div>
 
           <h3 className="font-semibold text-lg">
@@ -52,7 +80,10 @@ const Services = () => {
             sustainability, and long-term value.
           </h4>
           <br></br>
-          <h4 id="Messages" className="text-gray-500 text-base   tracking-wide ">
+          <h4
+            id="Messages"
+            className="text-gray-500 text-base   tracking-wide "
+          >
             With a strong eye for detail and a practical approach, Verdique
             delivers landscape solutions that enhance both residential and
             commercial environments. From concept to execution, every project is
@@ -61,7 +92,7 @@ const Services = () => {
         </div>
       </div>
 
-      <div  className="text-center md:w-5/12 w-10/12 mx-auto my-10 bg-white rounded-xl">
+      <div className="text-center md:w-5/12 w-10/12 mx-auto my-10 bg-white rounded-xl">
         <h1 className=" text-3xl font-bold p-8 md:text-4xl md:font-bold">
           Connect With Verdique
         </h1>
@@ -96,8 +127,12 @@ const Services = () => {
         </div>
       </div>
       <div className="h-60 bg-green-700 text-white flex flex-col justify-center items-center ">
-      <h4 className="text-3xl p-5 font-semibold">Need a Gardener For your Home ? Please Call:1234567890</h4>
-      <button className="bg-white font-semibold text-black p-4 rounded-full cursor-pointer ">CONTACT US</button>
+        <h4 className="text-3xl p-5 font-semibold">
+          Need a Gardener For your Home ? Please Call:1234567890
+        </h4>
+        <button className="bg-white font-semibold text-black p-4 rounded-full cursor-pointer ">
+          CONTACT US
+        </button>
       </div>
     </div>
   );

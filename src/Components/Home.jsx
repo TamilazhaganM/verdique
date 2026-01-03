@@ -1,4 +1,8 @@
+import { Link } from "react-router-dom";
 import homebg from "./../assets/home.jpg";
+import Offer from "./Offer";
+import Projects from "./Projects";
+import Services from "./Services";
 const Home = () => {
   return (
     <div id="home">
@@ -24,13 +28,16 @@ const Home = () => {
             </span>
           </h3>
 
-          <p className="md:w-1/2 text-lg font-semibold">
+          <p id="services" className="md:w-1/2 text-lg font-semibold">
             “We design and build sustainable landscapes that bring nature closer
             to your everyday life.”
           </p>
         </div>
       </div>
-      <a href="#home"><button className="fixed bottom-2 right-2 bg-green-500 text-2xl p-3 rounded-4xl z-10000 cursor-pointer"><i className="fa-solid fa-arrow-up"></i></button></a>
+      <Link to="/#home"><button className="fixed bottom-2 right-2 bg-green-500 text-2xl p-3 rounded-4xl z-10 cursor-pointer"><i className="fa-solid fa-arrow-up"></i></button></Link>
+      <Services/>
+      <Offer />
+      <Projects />
     </div>
   );
 };
