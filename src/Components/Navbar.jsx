@@ -20,7 +20,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center px-4 md:px-4 py-2 border-b-4 border-b-green-700">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <Link to="/"><img className="w-12 h-12 rounded-full p-2" src={logo} alt="Logo" /></Link>
+          <HashLink smooth to="/#home"><img className="w-12 h-12 rounded-full p-2" src={logo} alt="Logo" /></HashLink>
           <div>
             <h2 className="font-extrabold text-lg font-edu">Verdique</h2>
             <p className="text-[12px] text-gray-500">
@@ -74,7 +74,7 @@ const Navbar = () => {
         }`}
       >
         <ul className="flex flex-col p-4 gap-2">
-          <HashLink onClick={closeMenu} smooth to ="/"><li className="py-2 border-b border-gray-200 cursor-pointer">Home</li></HashLink>
+          <HashLink onClick={closeMenu} smooth to ="/#home"><li className="py-2 border-b border-gray-200 cursor-pointer">Home</li></HashLink>
           <HashLink onClick={closeMenu} smooth to ="/#about"><li className="py-2 border-b border-gray-200 cursor-pointer">About</li></HashLink>
           <HashLink ><li className="border-b border-gray-200">
   <button
@@ -82,7 +82,7 @@ const Navbar = () => {
     className="w-full text-left py-2 cursor-pointer flex justify-between items-center"
   >
     Services
-    <span>{serviceOpen ? <i class="fa-solid fa-minus"></i> : <i class="fa-solid fa-plus"></i>}</span>
+    <span >{serviceOpen ? <i class="fa-solid fa-minus"></i> : <i class="fa-solid fa-plus"></i>}</span>
   </button>
 
   {serviceOpen && (

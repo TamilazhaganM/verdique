@@ -1,4 +1,4 @@
-import maintenance from '../assets/maintenance1.jpg'
+import maintenance from '../assets/landscape1.jpg'
 import m9 from '../assets/garden/m9.jpeg'
 import m5 from '../assets/garden/m5.jpeg'
 import m4 from '../assets/garden/m4.jpeg'
