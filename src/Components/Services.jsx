@@ -6,6 +6,7 @@ import AgriIcon from "../assets/tractor.png";
 import MaintainIcon from "../assets/maintenance.png";
 import welcome1 from "../assets/welcome1.png";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Services = () => {
   const icons = [
@@ -41,6 +42,7 @@ useEffect(() => {
             className=" w-11/12 md:w-1/4  my-5 cursor-pointer "
             data-aos="fade-up"
             data-aos-delay={index * 200}
+            data-aos-duration="1000"
           >
             <div className="flex flex-col justify-center items-center rounded-xl h-40 bg-green-600 ">
               <img className="w-16 h-16" src={icon.icon} alt="" />
@@ -53,7 +55,7 @@ useEffect(() => {
         <div
           className="md:w-3/4"
           data-aos="fade-right" // slides from left → right
-          data-aos-duration="1500" // animation duration in ms
+          data-aos-duration="1000" // animation duration in ms
           data-aos-delay="200"
         >
           <img className="h-[350px] " src={welcome1} alt="" />
@@ -61,7 +63,7 @@ useEffect(() => {
         <div
           className="md:w-3/4"
           data-aos="fade-left" // slides from left → right
-          data-aos-duration="1500" // animation duration in ms
+          data-aos-duration="1000" // animation duration in ms
           data-aos-delay="200"
         >
           <h1 className="text-2xl font-bold md:text-5xl ">
@@ -128,11 +130,11 @@ useEffect(() => {
       </div>
       <div className="h-60 bg-green-700 text-white flex flex-col justify-center items-center ">
         <h4 className="text-3xl p-5 font-semibold">
-          Need a Gardener For your Home ? Please Call:1234567890
+          Need a Gardener For your Home ? Please Call : 9655228239
         </h4>
-        <button className="bg-white font-semibold text-black p-4 rounded-full cursor-pointer ">
+   <HashLink smooth to='/#contact'><button className="bg-white font-semibold text-black p-4 rounded-full cursor-pointer ">
           CONTACT US
-        </button>
+        </button></HashLink>
       </div>
     </div>
   );

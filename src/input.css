@@ -8,6 +8,8 @@ html {
 
 @theme{
     --font-edu:"Edu SA Hand","sans-serif";
+    --font-poppins:"Poppins","sans-serif";
+    --font-big-shoulders:"Big Shoulders Inline","sans-serif";
     --background-color-forms:rgb(244, 239, 239);
 }
 @keyframes letterSlide {

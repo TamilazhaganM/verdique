@@ -4,9 +4,11 @@ import Offer from "./Offer";
 import Projects from "./Projects";
 import Services from "./Services";
 import Welcomebar from "./Welcomebar";
+import { HashLink } from "react-router-hash-link";
 const Home = () => {
+
   return (
-    <div id="home">
+    <div >
     <Welcomebar/>
       <div
         className="relative bg-cover bg-center h-screen text-white"
@@ -36,7 +38,7 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <Link to="/#home"><button className="fixed bottom-2 right-2 bg-green-500 text-2xl p-3 rounded-4xl z-10 cursor-pointer"><i className="fa-solid fa-arrow-up"></i></button></Link>
+      <HashLink smooth to="/#home"><button className="fixed bottom-2 right-2 bg-green-500 text-2xl p-3 rounded-4xl z-10 cursor-pointer"><i className="fa-solid fa-arrow-up"></i></button></HashLink>
       <Services/>
       <Offer />
       <Projects />
