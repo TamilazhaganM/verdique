@@ -51,7 +51,7 @@ const Offer = () => {
 
             {/* Floating Card */}
 
-            <div className="absolute -bottom-8 -right-8 bg-[#0D1F0F] text-white p-8 rounded-3xl shadow-xl">
+            <div className="absolute -bottom-8 -right-4 bg-[#0D1F0F] text-white p-8 rounded-3xl shadow-xl">
 
               <h2 className="text-4xl font-bold text-[#7EC845]">
                 02+
