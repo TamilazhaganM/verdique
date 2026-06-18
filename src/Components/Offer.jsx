@@ -4,88 +4,133 @@ import OfferImage2 from "../assets/bulb.png";
 import OfferImage3 from "../assets/Quality.png";
 import OfferImage4 from "../assets/Transaparent.png";
 
+const features = [
+  {
+    icon: OfferImage1,
+    title: "Expertise You Can Trust",
+    text: "Years of landscape design experience delivering beautiful, sustainable outdoor environments.",
+  },
+  {
+    icon: OfferImage2,
+    title: "Tailored Solutions",
+    text: "Every landscape is designed around your lifestyle, vision and available space.",
+  },
+  {
+    icon: OfferImage3,
+    title: "Quality & Sustainability",
+    text: "Premium materials combined with eco-friendly practices create gardens that last.",
+  },
+  {
+    icon: OfferImage4,
+    title: "Transparent & Reliable",
+    text: "Clear communication, honest pricing and timely project completion from start to finish.",
+  },
+];
+
 const Offer = () => {
-  return ( 
-    <div>
-      <div className="md:flex">
-        <div>
-          <img className=" border rounded-full my-5" src={OfferImage} alt="People Choosing Us" />
-        </div>
-        <div className="flex flex-col mx-5">
-          <h2 className="text-2xl font-semibold text-green-700 my-5">Why People Choose Us</h2>
-          <h1 className="text-xl font-bold  w-2/3 my-5">The Best Lawn Moving & Gardening Service</h1>
-          <p className="text-gray-600 text-lg">
-            We provide a wide range of services for all types of lawns and
-            gardens. We have a team of experienced professionals who are
-            passionate about what they do. We use the latest equipment and
-            techniques to ensure that your lawn and garden look their best.
-          </p>
-          
-          </div>         
-      </div>
-      <div>
-            <div className="max-w-8xl mx-auto px-4 py-12 grid gap-8 md:grid-cols-2 lg:grid-cols-2">
-              <div className="flex flex-col items-center text-center p-6 md:p-2 bg-white rounded-xl shadow-lg">
-                <img
-                  src={OfferImage1}
-                  alt="Expertise Icon"
-                  className="w-16 h-16 mb-4"
-                />
-                <h3 className="text-lg font-bold mb-2">
-                  Expertise You Can Trust
-                </h3>
-                <p className="text-gray-600">
-                  Our team brings years of experience in landscape design and
-                  implementation, ensuring every project is executed flawlessly.
-                </p>
-              </div>
+  return (
+    <section
+      id="offer"
+      className="bg-[#FAFAF8] py-24"
+    >
+      <div className="max-w-7xl mx-auto px-6">
 
-              <div className="flex flex-col items-center text-center p-6 md:p-2 bg-white rounded-xl shadow-lg">
-                <img
-                  src={OfferImage2}
-                  alt="Tailored Solutions Icon"
-                  className="w-16 h-16 mb-4"
-                />
-                <h3 className="text-lg font-bold mb-2">Tailored Solutions</h3>
-                <p className="text-gray-600">
-                  We understand your vision and create customized green spaces
-                  that fit your lifestyle, space, and budget.
-                </p>
-              </div>
+        {/* Top Section */}
 
-              <div className="flex flex-col items-center text-center p-6 md:p-2 bg-white rounded-xl shadow-lg">
-                <img
-                  src={OfferImage3}
-                  alt="Quality Icon"
-                  className="w-16 h-16 mb-4"
-                />
-                <h3 className="text-lg font-bold mb-2">
-                  Quality & Sustainability
-                </h3>
-                <p className="text-gray-600">
-                  We use high-quality materials and eco-friendly practices to
-                  create landscapes that last and thrive naturally.
-                </p>
-              </div>
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-              <div className="flex flex-col items-center text-center p-6 md:p-2 bg-white rounded-xl shadow-lg">
-                <img
-                  src={OfferImage4}
-                  alt="Reliable Icon"
-                  className="w-16 h-16 mb-4"
-                />
-                <h3 className="text-lg font-bold mb-2">
-                  Transparent & Reliable
-                </h3>
-                <p className="text-gray-600">
-                  From consultation to completion, we maintain clear
-                  communication and timely delivery so you never have to worry.
-                </p>
-              </div>
+          {/* Image */}
+
+          <div className="relative">
+
+            <img
+              src={OfferImage}
+              alt="Landscape"
+              className="rounded-[32px] shadow-2xl w-full object-cover h-[520px]"
+            />
+
+            {/* Floating Card */}
+
+            <div className="absolute -bottom-8 -right-8 bg-[#0D1F0F] text-white p-8 rounded-3xl shadow-xl">
+
+              <h2 className="text-4xl font-bold text-[#7EC845]">
+                02+
+              </h2>
+
+              <p className="mt-2 text-gray-300">
+                Years of Experience
+              </p>
+
             </div>
-          
+
+          </div>
+
+          {/* Content */}
+
+          <div>
+
+            <p className="uppercase tracking-[4px] text-[#7EC845] font-semibold">
+              Why Choose Us
+            </p>
+
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0D1F0F] mt-5 leading-tight">
+              Creating Beautiful
+              <br />
+              Green Spaces That Last
+            </h2>
+
+            <p className="text-gray-600 leading-8 mt-8 text-lg">
+              We combine creativity, sustainability, and expert craftsmanship
+              to design outdoor spaces that enhance everyday living. Every
+              project is carefully planned to reflect your vision while
+              maintaining harmony with nature.
+            </p>
+
+            <button className="mt-10 bg-[#7EC845] hover:bg-[#4A7C59] text-[#0D1F0F] hover:text-white px-8 py-4 rounded-full font-semibold transition duration-300">
+              Learn More
+            </button>
+
+          </div>
+
         </div>
-    </div>
+
+        {/* Feature Cards */}
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-24">
+
+          {features.map((item, index) => (
+
+            <div
+              key={index}
+              className="bg-white rounded-3xl p-8 shadow-lg hover:-translate-y-3 hover:shadow-2xl transition duration-500 group"
+            >
+
+              <div className="w-20 h-20 rounded-full bg-[#F5F2EC] flex items-center justify-center mb-6 group-hover:bg-[#7EC845] transition">
+
+                <img
+                  src={item.icon}
+                  alt={item.title}
+                  className="w-10 h-10"
+                />
+
+              </div>
+
+              <h3 className="text-2xl font-bold text-[#0D1F0F] mb-4">
+                {item.title}
+              </h3>
+
+              <p className="text-gray-600 leading-7">
+                {item.text}
+              </p>
+
+            </div>
+
+          ))}
+
+        </div>
+
+      </div>
+    </section>
   );
 };
 

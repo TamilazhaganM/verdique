@@ -6,11 +6,11 @@ html {
   scroll-behavior:smooth;
 }
 
-@theme{
-    --font-edu:"Edu SA Hand","sans-serif";
-    --font-poppins:"Poppins","sans-serif";
-    --font-big-shoulders:"Big Shoulders Inline","sans-serif";
-    --background-color-forms:rgb(244, 239, 239);
+:root{
+  --font-edu: "Edu SA Hand", "sans-serif";
+  --font-poppins: "Poppins", "sans-serif";
+  --font-big-shoulders: "Big Shoulders Inline", "sans-serif";
+  --background-color-forms: rgb(244, 239, 239);
 }
 @keyframes letterSlide {
  0% {
@@ -26,6 +26,57 @@ html {
     opacity: 0;
   }
 }
+@keyframes fadeUp {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes growBar {
+from {
+height: 0;
+}
+to {
+height: 100%;
+}
+}
+
+@layer utilities {
+.animate-fade-up-1 {
+animation: fadeUp 0.6s ease 0.5s forwards;
+opacity: 0;
+}
+
+.animate-fade-up-2 {
+animation: fadeUp 0.7s ease 0.7s forwards;
+opacity: 0;
+}
+
+.animate-fade-up-3 {
+animation: fadeUp 0.7s ease 0.9s forwards;
+opacity: 0;
+}
+
+.animate-fade-up-4 {
+animation: fadeUp 0.7s ease 1.1s forwards;
+opacity: 0;
+}
+
+.animate-fade-up-5 {
+animation: fadeUp 0.7s ease 1.3s forwards;
+opacity: 0;
+}
+
+.animate-grow-bar {
+animation: growBar 1.2s cubic-bezier(0.22,1,0.36,1) 0.2s both;
+}
+}
+
 
 /* Custom utility class */
 @layer utilities {

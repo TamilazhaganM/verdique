@@ -1,72 +1,116 @@
-import { useState, useEffect } from "react";
-import f1 from "../assets/f1.jpg";
+
+import f1 from "../assets/f7.jpg";
 import f2 from "../assets/f2.jpg";
 import f3 from "../assets/f3.jpg";
-import f4 from "../assets/f4.jpg";
-
+import f4 from "../assets/f7.jpg";
 
 const Projects = () => {
-  const images = [
-    { image: f1, text: "Thoughtfully designed green spaces.", place: "Residence" },
-    { image: f2, text: "Premium landscape designs.", place: "Villa" },
-    { image: f3, text: "Modern landscaping solutions.", place: "Apartment" },
-    { image: f4, text: "Beautifully crafted landscapes.", place: "Terrace Garden" },
+  const projects = [
+    {
+      image: f1,
+      title: "Home Landscape",
+      description: "Elegant outdoor living spaces designed for modern homes.",
+    },
+    {
+      image: f2,
+      title: "Luxury Villa",
+      description: "Premium landscaping with lush gardens and natural beauty.",
+    },
+    {
+      image: f3,
+      title: "Apartment Greens",
+      description: "Functional green spaces that improve everyday living.",
+    },
+    {
+      image: f4,
+      title: "Terrace Garden",
+      description: "Transforming rooftops into peaceful green retreats.",
+    },
   ];
 
-  const [activeIndex, setActiveIndex] = useState(null);
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Detect screen size
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768); // md breakpoint = 768px
-    handleResize(); // set initial value
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
-    <div className="p-8">
-      <h1 className="text-4xl text-center">Our Feature Projects</h1>
+    <section
+      id="projects"
+      className="bg-[#FAFAF8] py-24"
+    >
+      <div className="max-w-7xl mx-auto px-6">
 
-      <div className="flex flex-col md:flex-row gap-8 my-10 w-full">
-        {images.map((image, index) => (
-          <div key={index} className="w-full md:w-1/2">
+        {/* Heading */}
+
+        <div className="text-center mb-16">
+
+          <p className="uppercase tracking-[5px] text-[#7EC845] font-semibold">
+            Our Portfolio
+          </p>
+
+          <h2 className="text-4xl md:text-5xl font-bold text-[#0D1F0F] mt-4">
+            Featured Projects
+          </h2>
+
+          <p className="max-w-2xl mx-auto text-gray-600 mt-6 leading-8">
+            Every landscape is carefully designed to blend
+            beauty, sustainability and functionality.
+          </p>
+
+          <div className="w-24 h-1 bg-[#7EC845] rounded-full mx-auto mt-6"></div>
+
+        </div>
+
+        {/* Cards */}
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          {projects.map((project, index) => (
+
             <div
-              className="relative overflow-hidden group cursor-pointer"
-              onClick={() => isMobile && setActiveIndex(activeIndex === index ? null : index)}
+              key={index}
+              className="group overflow-hidden rounded-3xl shadow-lg bg-white hover:shadow-2xl transition-all duration-500"
             >
-              {/* Overlay */}
-              <div
-  className={`
-    absolute inset-0 
-    w-2/3 md:w-2/3 h-full
-    bg-green-500 text-white flex items-center justify-center 
-    transition-all duration-500 ease-in-out
-    ${isMobile && activeIndex === index ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}
-    md:group-hover:translate-x-0 md:group-hover:opacity-100
-  `}
->
-  <p className="text-center px-4 text-sm md:text-base">{image.text}</p>
-</div>
-
 
               {/* Image */}
-              <img
-                className="w-full  transform origin-left transition-all duration-500 ease-in-out
-                  group-hover:scale-90 group-hover:translate-x-[66.666%]"
-                src={image.image}
-                alt=""
-              />
+
+              <div className="relative overflow-hidden h-[420px]">
+
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                />
+
+                {/* Gradient */}
+
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0D1F0F]/90 via-[#0D1F0F]/20 to-transparent"></div>
+
+                {/* Text */}
+
+                <div className="absolute bottom-0 p-6">
+
+                  <span className="inline-block bg-[#7EC845] text-[#0D1F0F] px-4 py-1 rounded-full text-xs font-bold uppercase mb-4">
+                    Project
+                  </span>
+
+                  <h3 className="text-white text-2xl font-bold">
+                    {project.title}
+                  </h3>
+
+                  <p className="text-white/80 mt-3 leading-7 text-sm">
+                    {project.description}
+                  </p>
+
+                </div>
+
+              </div>
+
             </div>
 
-            <h2 className="text-xl font-bold text-white text-center mt-3 bg-green-700">
-              {image.place}
-            </h2>
-          </div>
-        ))}
+          ))}
+
+        </div>
+
       </div>
-    </div>
+    </section>
   );
 };
 
 export default Projects;
+

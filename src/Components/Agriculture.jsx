@@ -1,15 +1,14 @@
 import { useEffect } from "react";
 
-import maintenance from "../assets/landscape1.jpg";
+import agri from "../assets/agri.jpg";
+import a6 from "../assets/agriculture/a6.jpg";
+import a1 from "../assets/agriculture/a1.jpg";
+import a2 from "../assets/agriculture/a2.jpeg";
+import a3 from "../assets/agriculture/a3.jpg";
+import a4 from "../assets/agriculture/a4.jpg";
+import a5 from "../assets/agriculture/a5.jpg";
 
-import m9 from "../assets/garden/m9.jpeg";
-import m5 from "../assets/garden/m5.jpeg";
-import m4 from "../assets/garden/m4.jpeg";
-import m6 from "../assets/garden/m6.jpeg";
-import m1 from "../assets/garden/m1.jpeg";
-import m3 from "../assets/garden/m3.jpeg";
-
-const Garden = () => {
+const Agriculture = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -17,37 +16,37 @@ const Garden = () => {
   const services = [
     {
       no: "01",
-      title: "Regular Watering",
-      desc: "Ensures plants remain healthy, vibrant, and receive consistent hydration throughout the year.",
+      title: "Soil Preparation",
+      desc: "Preparing fertile soil to provide the ideal foundation for healthy crop growth.",
     },
     {
       no: "02",
-      title: "Lawn Mowing",
-      desc: "Maintains a neat lawn while encouraging stronger, healthier grass growth.",
+      title: "Crop Sowing",
+      desc: "Planting crops using the right methods and timing for maximum productivity.",
     },
     {
       no: "03",
-      title: "Pruning & Trimming",
-      desc: "Removes dead branches and shapes shrubs and trees for healthy development.",
+      title: "Irrigation",
+      desc: "Providing efficient and sustainable water management for optimal crop health.",
     },
     {
       no: "04",
-      title: "Weed Control",
-      desc: "Protects your garden by removing invasive weeds before they affect plant growth.",
+      title: "Fertilization",
+      desc: "Supplying essential nutrients to improve soil fertility and crop yields.",
     },
     {
       no: "05",
-      title: "Soil Care",
-      desc: "Improves soil quality with nutrients and conditioning for stronger roots.",
+      title: "Pest Control",
+      desc: "Protecting crops from pests and diseases using safe and effective solutions.",
     },
     {
       no: "06",
-      title: "Seasonal Cleanup",
-      desc: "Keeps your landscape fresh and beautiful during every season of the year.",
+      title: "Harvesting",
+      desc: "Collecting crops at peak maturity while preserving their quality and value.",
     },
   ];
 
-  const gallery = [m9, m5, m4, m6, m1, m3];
+  const gallery = [a6, a1, a2, a3, a4, a5];
 
   return (
     <section className="bg-[#FAFAF8]">
@@ -57,8 +56,8 @@ const Garden = () => {
       <div className="relative h-[500px]">
 
         <img
-          src={maintenance}
-          alt="Garden Maintenance"
+          src={agri}
+          alt="Agriculture"
           className="w-full h-full object-cover"
         />
 
@@ -67,17 +66,17 @@ const Garden = () => {
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6">
 
           <p className="uppercase tracking-[5px] text-[#7EC845] font-semibold">
-            Professional Care
+            Sustainable Farming
           </p>
 
           <h1 className="text-5xl md:text-6xl font-bold text-white mt-4">
-            Garden Maintenance
+            Agriculture Services
           </h1>
 
           <p className="max-w-2xl mt-6 text-gray-200 leading-8">
-            Healthy gardens require consistent care. We provide reliable
-            maintenance services that keep your outdoor spaces lush, vibrant,
-            and beautiful all year round.
+            We provide reliable agricultural solutions that improve productivity,
+            promote sustainability, and ensure healthy crop growth through
+            modern farming practices.
           </p>
 
         </div>
@@ -95,11 +94,11 @@ const Garden = () => {
           <div>
 
             <p className="uppercase tracking-[4px] text-[#7EC845] font-semibold">
-              What We Do
+              Our Expertise
             </p>
 
             <h2 className="text-4xl font-bold text-[#0D1F0F] mt-4 mb-10">
-              Complete Garden Care
+              Professional Agricultural Solutions
             </h2>
 
             <div className="space-y-6">
@@ -108,7 +107,7 @@ const Garden = () => {
 
                 <div
                   key={service.no}
-                  className="bg-white rounded-3xl p-6 shadow-lg hover:shadow-xl hover:-translate-y-1 transition flex gap-5"
+                  className="bg-white rounded-3xl p-6 shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300 flex gap-5"
                 >
 
                   <div className="min-w-[65px] h-[65px] rounded-full bg-[#7EC845] flex items-center justify-center">
@@ -144,9 +143,9 @@ const Garden = () => {
           <div>
 
             <img
-              src={maintenance}
-              alt="Garden"
-              className="rounded-[32px] shadow-2xl"
+              src={agri}
+              alt="Agriculture"
+              className="rounded-[32px] shadow-2xl w-full"
             />
 
           </div>
@@ -162,21 +161,21 @@ const Garden = () => {
         <div className="text-center mb-16">
 
           <p className="uppercase tracking-[4px] text-[#7EC845] font-semibold">
-            Our Work
+            Our Projects
           </p>
 
           <h2 className="text-4xl font-bold text-[#0D1F0F] mt-4">
-            Garden Gallery
+            Agriculture Gallery
           </h2>
 
-          <p className="text-gray-600 mt-5 max-w-2xl mx-auto">
-            Explore some of our beautifully maintained gardens that reflect our
-            commitment to quality, sustainability, and exceptional care.
+          <p className="text-gray-600 mt-5 max-w-2xl mx-auto leading-7">
+            Take a look at our agricultural projects showcasing sustainable
+            farming techniques, healthy crops, and professional field management.
           </p>
 
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
           {gallery.map((image, index) => (
 
@@ -187,7 +186,7 @@ const Garden = () => {
 
               <img
                 src={image}
-                alt=""
+                alt={`Agriculture ${index + 1}`}
                 className="w-full h-[320px] object-cover group-hover:scale-110 transition duration-700"
               />
 
@@ -203,4 +202,4 @@ const Garden = () => {
   );
 };
 
-export default Garden;
+export default Agriculture;
