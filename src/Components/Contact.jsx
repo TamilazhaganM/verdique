@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { toast } from "react-toastify";
 
 function Contact() {
-  const API_URL = process.env.API_URL || "http://localhost:5000";
+  const API_URL = import.meta.env.API_URL || "http://localhost:5000";
   const [name, setName] = useState("");
   const [mail, setMail] = useState("");
   const [phone, setPhone] = useState("");
@@ -13,8 +13,14 @@ function Contact() {
     { name: "", mail: "", phone: "", service: "", message: "" },
   ]);
 
-  async function handlesubmit() {
-    const newUser = { name, mail, phone, service, message };
+async function handlesubmit() {
+  const newUser = { name, mail, phone, service, message };
+
+  try {
+    const response = await axios.post(`${API_URL}/addclient`, newUser);
+
+    toast.success("Details submitted successfully!");
+
     setUsers((prev) => [...prev, newUser]);
 
     setName("");
@@ -23,19 +29,12 @@ function Contact() {
     setService("");
     setMessage("");
 
-    try {
-      const response = await axios.post(
-        `${API_URL}/addclient`,
-        newUser,
-      );
-      toast.success("Details submitted successfully!");
-      console.log(response);
-    } catch (error) {
-      toast.error("Failed to submit details.");
-      console.error(`Error Message: ${error}`);
-    }
+    console.log(response.data);
+  } catch (error) {
+    toast.error("Failed to submit details.");
+    console.error(error);
   }
-
+}
 
   return (
     <div>

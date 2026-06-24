@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Admin = () => {
-  const API_URL = process.env.API_URL || "http://localhost:5000";
+  const API_URL = import.meta.env.API_URL || "http://localhost:5000";
   const navigate = useNavigate();
 
   const [customers, setCustomers] = useState([]);
@@ -42,7 +42,7 @@ const Admin = () => {
     };
 
     fetchCustomers();
-  }, [navigate]);
+  }, [navigate, API_URL]);
 
   // Update Customer Status
   const updateStatus = async (id, status) => {
