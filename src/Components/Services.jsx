@@ -165,7 +165,7 @@ const Services = () => {
 
         <div className="max-w-6xl mx-auto text-center px-6">
 
-          <h2 className="text-4xl md:text-5xl font-bold text-[#F5F2EC]">
+          <h2 id="contact" className="text-4xl md:text-5xl font-bold text-[#F5F2EC]">
             Let's Build Your Dream Garden
           </h2>
 
