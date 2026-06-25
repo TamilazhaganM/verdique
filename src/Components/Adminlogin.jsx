@@ -12,7 +12,7 @@ const Adminlogin = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = async (e) => {
-    const API_URL = import.meta.env.API_URL || "http://localhost:5000";
+    const API_URL = import.meta.env.VITE_API_URL;
     e.preventDefault();
 
     try {
